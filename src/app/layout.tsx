@@ -2,6 +2,7 @@ import '~/styles/globals.css';
 
 import { GeistSans } from 'geist/font/sans';
 import { type Metadata } from 'next';
+import Header from './components/Header';
 
 export const metadata: Metadata = {
   title: 'NeOzon',
@@ -20,7 +21,10 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
             filter: 'opacity(0.2)',
           }}
         />
-        <div className="relative z-10">{children}</div>
+        <div className="relative z-10">
+          <Header />
+          {children}
+        </div>
       </body>
     </html>
   );
