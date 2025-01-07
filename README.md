@@ -8,3 +8,14 @@
 - PostgreSQL DB
 - Drizzle ORM
 - Tailwind
+
+## API
+
+https://fakestoreapi.com/docs
+
+## Запуск
+
+docker compose up -d
+npx drizzle-kit generate
+npx drizzle-kit push
+npm run dev

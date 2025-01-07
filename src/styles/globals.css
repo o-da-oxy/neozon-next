@@ -5,3 +5,28 @@
 body {
   @apply text-darkSpace;
 }
+
+.moon-container {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  width: 60%;
+  height: 70%;
+  transform: translateX(10%);
+}
+
+.animate-moon {
+  animation: moon-appear 1s ease-in-out forwards;
+  opacity: 0;
+}
+
+@keyframes moon-appear {
+  0% {
+    transform: translateX(10%) translateY(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(10%) translateY(0);
+    opacity: 1;
+  }
+}

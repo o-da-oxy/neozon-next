@@ -3,6 +3,7 @@ import '~/styles/globals.css';
 import { GeistSans } from 'geist/font/sans';
 import { type Metadata } from 'next';
 import Header from './components/Header';
+import { CartProvider } from './components/CartContext';
 
 export const metadata: Metadata = {
   title: 'NeOzon',
@@ -19,11 +20,14 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
           style={{
             backgroundImage: 'url(/bg.png)',
             filter: 'opacity(0.2)',
+            position: 'fixed',
           }}
         />
         <div className="relative z-10">
-          <Header />
-          {children}
+          <CartProvider>
+            <Header />
+            {children}
+          </CartProvider>
         </div>
       </body>
     </html>
